@@ -1,0 +1,23 @@
+<!-- main/templates/article_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Articles</title>
+</head>
+<body>
+    <h1>Liste des Articles</h1>
+    <ul>
+        {% for article in articles %}
+        <li>
+            <h2>{{ article.title }}</h2>
+            <p>{{ article.content }}</p>
+            <p>Publié le : {{ article.publication_date }}</p>
+        </li>
+        {% empty %}
+        <li>Aucun article trouvé.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
