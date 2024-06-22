@@ -38,6 +38,10 @@ msgid "Bonjour"
 msgstr "Hello"
 
 
+msgid "Salut, monde!"
+msgstr "Hello World!"
+
+
 #: main/templates/home.html:52 main/templates/item.html:12
 #: main/templates/item.html:53 main/views.py:43
 
