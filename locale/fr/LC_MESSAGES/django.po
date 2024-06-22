@@ -36,13 +36,16 @@ msgstr ""
 
 #: main/templates/home.html:52 main/templates/item.html:12
 #: main/templates/item.html:53 main/views.py:43
-msgid "hello"
-msgstr "bonjour"
+
+msgid "Hello"
+msgstr "Bonjour"
+
+
 
 #: main/templates/home.html:58
 #, python-format
 msgid "%(article.title)s"
-msgstr ""
+msgstr "%(article.titre)s"
 
 #: main/templates/home.html:60
 #, python-format
@@ -50,8 +53,8 @@ msgid "%(article.content)s"
 msgstr ""
 
 #: main/templates/item.html:55
-msgid "Liste des Articles"
-msgstr ""
+msgid "Article list"
+msgstr "liste d'articles"
 
 #: venv/lib/python3.10/site-packages/django/contrib/messages/apps.py:16
 msgid "Messages"
