@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-20 19:58+0000\n"
+"POT-Creation-Date: 2024-06-24 16:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: core/settings.py:132
+#: core/settings.py:135
 msgid "English"
 msgstr ""
 
-#: core/settings.py:133
+#: core/settings.py:136
 msgid "French"
 msgstr ""
 
@@ -30,32 +30,33 @@ msgstr ""
 msgid "admin/"
 msgstr ""
 
-#: main/models.py:5
-msgid "Title"
+#: main/templates/home.html:13
+msgid "Hello, world!"
 msgstr ""
 
-#: main/templates/home.html:52 main/templates/item.html:12
-#: main/templates/item.html:53 main/views.py:43
+#: main/templates/home.html:53
+msgid "Article list"
+msgstr "Liste d'articles"
 
-msgid "Hello, world!"
-msgstr "Salut, monde!"
+#: main/templates/home.html:54
+msgid "Title of the 1st article"
+msgstr "Titre du premier article"
 
-msgid "Hello"
-msgstr "Bonjour"
+#: main/templates/home.html:55
+msgid "Content of the first article"
+msgstr "Contenu du premier article"
 
+#: main/templates/home.html:56
+msgid "June 16, 2024"
+msgstr "16 juin 2024"
 
-
-
-
-
-#: main/templates/home.html:60
-#, python-format
-msgid "%(article.content)s"
+#: main/templates/item.html:12 main/templates/item.html:53
+msgid "hello"
 msgstr ""
 
 #: main/templates/item.html:55
-msgid "Article list"
-msgstr "liste d'articles"
+msgid "Liste des Articles"
+msgstr ""
 
 #: venv/lib/python3.10/site-packages/django/contrib/messages/apps.py:16
 msgid "Messages"

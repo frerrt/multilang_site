@@ -1,10 +1,10 @@
-from django.urls import path
+from django.urls import path,include
 
 from . import views
 
 app_name = 'main'
 
 urlpatterns = [
-    path('item/',views.item,name='item'),
     path('',views.article_list,name='home'),
+    path('chat/', include('chatbot.urls')),
 ]
