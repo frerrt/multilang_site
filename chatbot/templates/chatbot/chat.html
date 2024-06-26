@@ -5,7 +5,8 @@
     <div class="card flex-grow-1">
         <div class="card-header bg-primary text-white">Chat</div>
         {% if user.is_authenticated %}
-        <div class="card-header bg-primary text-white"><b>Welcome, {{ user.username }}</b>
+        <div class="card-header bg-primary text-white">
+            <b>Welcome, {{ user.username }}</b>
             <a style="color: yellow;" href="{% url 'logout' %}">Logout</a>
         </div>
         {% else %}
@@ -16,7 +17,7 @@
         {% endif %}
         <div class="card-body messages-box">
             <ul class="list-unstyled messages-list">
-                <!-- Messages échangés entre l'utilisateur et l'AI Chatbot -->
+                <!-- Messages exchanged between the user and the AI Chatbot -->
             </ul>
         </div>
     </div>
@@ -44,7 +45,7 @@
             return;
         }
 
-        // Créer et ajouter le message envoyé par l'utilisateur à la liste des messages
+        // Create and add the user message to the messages list
         const userMessageItem = document.createElement('li');
         userMessageItem.classList.add('message', 'sent');
         userMessageItem.innerHTML = `
@@ -58,8 +59,8 @@
         </div>`;
         messagesList.appendChild(userMessageItem);
 
-        // Envoyer une requête AJAX pour obtenir la réponse de l'AI Chatbot
-        fetch('', {
+        // Send an AJAX request to get the AI Chatbot's response
+        fetch('{% url 'chatbot_response' %}', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -79,7 +80,7 @@
             .then(data => {
                 const response = data.response;
 
-                // Créer et ajouter la réponse de l'AI Chatbot à la liste des messages
+                // Create and add the AI Chatbot's response to the messages list
                 const botMessageItem = document.createElement('li');
                 botMessageItem.classList.add('message', 'received');
                 botMessageItem.innerHTML = `
@@ -97,7 +98,7 @@
                 console.error('There was a problem with the fetch operation:', error);
             });
 
-        // Réinitialiser le champ de saisie après l'envoi du message
+        // Reset the message input field after sending the message
         messageInput.value = '';
     });
 </script>
