@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block content %}
 <div class="container">
-    <h2>Login</h2>
+    <h2>{% translate "Login" %}</h2>
     {% if error %}
     <p style="color:red;">{{ error }}</p>
     {% endif %}
     <form method="post">
         {% csrf_token %}
         <div class="form-group">
-            <label for="username">Username:</label>
+            <label for="username">{% translate "Username:" %}</label>
             <input type="text" class="form-control" name="username" id="username" required>
         </div>
         <div class="form-group">
-            <label for="password">Password:</label>
+            <label for="password">{% translate "Password:" %}</label>
             <input type="password" class="form-control" name="password" id="password" required>
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-primary">{% translate "Login" %}</button>
     </form>
 </div>
 {% endblock %}

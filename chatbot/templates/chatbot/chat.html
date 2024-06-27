@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends '../../main/templates/main/base.html' %}
 
 {% block content %}
 <div class="chat-container">
@@ -7,12 +7,12 @@
         {% if user.is_authenticated %}
         <div class="card-header bg-primary text-white">
             <b>Welcome, {{ user.username }}</b>
-            <a style="color: yellow;" href="{% url 'logout' %}">Logout</a>
+            <a style="color: yellow;" href="#">Logout</a>
         </div>
         {% else %}
         <div class="card-header bg-primary text-white">
-            <a style="color: yellow" href="{% url 'login' %}">Login</a>
-            <a style="color: yellow;" href="{% url 'register' %}">Register</a>
+            <a style="color: yellow" href="#">Login</a>
+            <a style="color: yellow;" href="#">Register</a>
         </div>
         {% endif %}
         <div class="card-body messages-box">

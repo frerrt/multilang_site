@@ -50,6 +50,32 @@ msgstr "Content of the first article"
 msgid "June 16, 2024"
 msgstr "June 16, 2024"
 
+#: main/templates/base.html:12
+msgid "Welcome to My Site"
+msgstr "Welcome to My Site"
+
+#: main/templates/chat.html:15
+msgid "Login"
+msgstr "Login"
+
+#: main/templates/chat.html:16
+msgid "Register"
+msgstr "Register"
+
+#: main/templates/chat.html:30
+msgid "Send"
+msgstr "Send"
+
+#: main/templates/login.html:12
+msgid "Username:"
+msgstr "Username:"
+
+
+#: main/templates/login.html:16
+msgid "Password:"
+msgstr "Password:"
+
+
 #: main/templates/item.html:12 main/templates/item.html:53
 msgid "hello"
 msgstr ""
