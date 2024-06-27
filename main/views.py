@@ -82,3 +82,6 @@ def generate_response(message):
         return _("I'm your friendly chatbot.")
     else:
         return random.choice(responses)
+
+def root_redirect(request):
+    return redirect('main:home')

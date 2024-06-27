@@ -4,7 +4,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import gettext_lazy as _
 
 urlpatterns = [
-    path(_('admin/'), admin.site.urls),  # Localized admin URL
+    path('admin/', admin.site.urls),  # Localized admin URL
 ]
 
 # Internationalized URL patterns
