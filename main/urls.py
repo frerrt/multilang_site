@@ -1,5 +1,8 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 app_name = 'main'
 
@@ -12,4 +15,5 @@ urlpatterns = [
     path('register/', views.register_view, name='register'),
     path('chatbot/', views.chat_view, name='chat'),  # Add chat view
     path('chatbot-response/', views.chatbot_response, name='chatbot-response')
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

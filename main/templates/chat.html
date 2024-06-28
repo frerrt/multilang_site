@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'baseLogin.html' %}
 {% load i18n %}
 
 {% block content %}
@@ -8,13 +8,8 @@
         {% if user.is_authenticated %}
         <div class="card-header bg-primary text-white">
             <b>Welcome, {{ user.username }}</b>
-            <a style="color: yellow;" href="{% url 'main:logout' %}">Logout</a>
         </div>
-        {% else %}
-        <div class="card-header bg-primary text-white">
-            <a style="color: yellow" href="{% url 'main:login' %}">{% translate "Login" %}</a>
-            <a style="color: yellow;" href="{% url 'main:register' %}">{% translate "Register" %}</a>
-        </div>
+    
         {% endif %}
         <div class="card-body messages-box">
             <ul class="list-unstyled messages-list">
