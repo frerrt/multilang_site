@@ -49,17 +49,61 @@ msgid "Date1"
 msgstr "june 16 2024"
 
 
-#: main/templates/articles.html:9
+#: main/templates/articles.html:14
 msgid "Title2"
 msgstr "legislative election"
 
-#: main/templates/articles.html:10
+#: main/templates/articles.html:15
 msgid "Content2"
 msgstr "Marine le pen should not win the election"
 
-#: main/templates/articles.html:11
+#: main/templates/articles.html:16
 msgid "Date2"
 msgstr "june 16 2024"
+
+
+#: main/templates/articles.html:19
+msgid "Title3"
+msgstr "européen debate"
+
+#: main/templates/articles.html:20
+msgid "Content3"
+msgstr "Two weeks before the European elections, the prime minister and the president of the RN faced each other in a debate on multiple themes, punctuated by approximations and errors."
+
+#: main/templates/articles.html:21
+msgid "Date3"
+msgstr "june 30 2024"
+
+
+
+#: main/templates/articles.html:24
+msgid "Title4"
+msgstr "The Olympic Torch Relay"
+
+#: main/templates/articles.html:25
+msgid "Content4"
+msgstr "This iconic ritual of the greatest sporting event, a symbol of peace and fraternity, appeared in 1936 under the Third Reich. Is this a logical continuation of the Olympic project or a stunt of Nazi propaganda? His story is ambivalent."
+
+#: main/templates/articles.html:26
+msgid "Date4"
+msgstr "june 30 2024"
+
+
+
+#: main/templates/articles.html:29
+msgid "Title5"
+msgstr "Bad debtor"
+
+#: main/templates/articles.html:30
+msgid "Content5"
+msgstr "The former US president sowed confusion between direct funding of NATO and the military spending of allies, which is supposed to represent at least 2% of their GDP."
+
+#: main/templates/articles.html:31
+msgid "Date5"
+msgstr "june 30 2024"
+
+
+
 
 #: main/templates/base.html:12
 msgid "Welcome to My Site"

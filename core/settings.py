@@ -11,11 +11,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_URL = '/static/'
 
 # Répertoire où collecter les fichiers statiques (utilisé par collectstatic)
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'staticfiles' # a enlever
 
 # Répertoires supplémentaires où chercher les fichiers statiques
 STATICFILES_DIRS = [
-    BASE_DIR / 'main' / 'static',
+     os.path.join(BASE_DIR, 'main/static'),
 ]
 
 

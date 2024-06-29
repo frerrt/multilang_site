@@ -65,6 +65,47 @@ msgstr "30 juin 2024"
 
 
 
+#: main/templates/articles.html:19
+msgid "Title3"
+msgstr "débat européen"
+
+#: main/templates/articles.html:20
+msgid "Content3"
+msgstr "A deux semaines des élections européennes, le premier ministre et le président du RN se sont affrontés dans un débat à thèmes multiples, ponctué d’approximations et d’erreurs."
+
+#: main/templates/articles.html:21
+msgid "Date3"
+msgstr "30 juin 2024"
+
+
+
+#: main/templates/articles.html:24
+msgid "Title4"
+msgstr "Le relais de la flamme olympique"
+
+#: main/templates/articles.html:25
+msgid "Content4"
+msgstr "Ce rituel iconique du plus grand événement sportif, symbole de paix et de fraternité, est apparu en 1936 sous le IIIᵉ Reich. Continuation logique du projet olympique ou coup d’éclat de la propagande nazie ? Son histoire est ambivalente."
+
+#: main/templates/articles.html:26
+msgid "Date4"
+msgstr "30 juin 2024"
+
+
+
+#: main/templates/articles.html:29
+msgid "Title5"
+msgstr "des mauvais payeurs"
+
+#: main/templates/articles.html:30
+msgid "Content5"
+msgstr "L’ex-président américain a semé la confusion entre le financement direct de l’OTAN et les dépenses militaires des alliés, qui sont censées représenter au moins 2 % de leur PIB."
+
+#: main/templates/articles.html:31
+msgid "Date5"
+msgstr "30 juin 2024"
+
+
 
 
 

@@ -1,3 +1,34 @@
 body {
-    background-color: green;
+    background-color: rgb(221, 221, 221);
+}
+
+.titre {
+    color: black;
+    text-align: center;
+}
+
+navbar .nav-link {
+    color: red;
+}
+
+.articles {
+    text-align: center;
+    color: black;
+    font-size: 64px;
+}
+
+.article_title {
+    text-align: left;
+    color: black;
+}
+
+
+.article_content {
+    text-align: left;
+    color: black;
+}
+
+.article_date {
+    text-align: left;
+    color: black;
 }
