@@ -3,7 +3,11 @@ import os
 
 SECRET_KEY = 'django-insecure-rdz8ln37wjjeyhj&s0earj*12!6x(pyfv)#z921tx*w09ctdd*'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [   
+    'multilang-site-1-9oaq.onrender.com',
+    'localhost',       # Add localhost for development
+    '127.0.0.1',       # Add localhost IP address for development
+]
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
