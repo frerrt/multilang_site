@@ -60,16 +60,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'News',
-        'USER': 'afrid',
-        'PASSWORD': 'afrid',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'News',
+#         'USER': 'afrid',
+#         'PASSWORD': 'afrid',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
