@@ -1,6 +1,18 @@
 body {
     background-color: rgb(221, 221, 221);
 }
+/* Ajoutez ce CSS pour le bouton Show Responses */
+#show-responses {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+/* Ajoutez ce CSS pour masquer les messages */
+.message.received,
+.message.sent {
+    display: block;
+}
 /* Header styles */
 .entete {
     background-color: #333;
@@ -453,3 +465,113 @@ body {
 }
 
 /* fin chat */
+/* Chat container styles */
+.chat-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.card-header {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-body {
+    flex-grow: 1;
+    overflow-y: auto; /* Allow vertical scrolling */
+    padding: 10px;
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.messages-box {
+    flex-grow: 1;
+    overflow-y: auto; /* Allow vertical scrolling */
+    padding: 10px;
+}
+
+.messages-list {
+    margin-bottom: 10px;
+}
+
+.message-form {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding-top: 10px;
+    border-top: 1px solid #e9ecef;
+}
+
+.input-group {
+    display: flex;
+}
+
+.message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.input-group-append {
+    margin-left: 10px;
+}
+
+.btn-send {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+.messages-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    word-wrap: break-word;
+}
+
+.messages-list li:nth-child(odd) {
+    background: #e9ecef;
+}
+
+/* Button to scroll to the top */
+#scroll-to-top {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .chat-container {
+        padding: 10px;
+    }
+
+    .card-header {
+        font-size: 1em;
+    }
+
+    .message-input {
+        font-size: 0.9em;
+    }
+
+    .btn-send {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}

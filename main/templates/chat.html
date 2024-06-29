@@ -5,57 +5,61 @@
 {% block content %}
 <div class="chat-container">
     <div class="card flex-grow-1">
-        <div class="card-header bg-primary text-white">Chat</div>
+        <div class="card-header bg-primary text-white">{% translate "Chat" %}</div>
         {% if user.is_authenticated %}
         <div class="card-header bg-primary text-white">
-            <b>Welcome, {{ user.username }}</b>
+            <b>{% translate "Welcome" %}, {{ user.username }}</b>
         </div>
-    
         {% endif %}
         <div class="card-body messages-box">
-            <ul class="list-unstyled messages-list">
-                <!-- Messages exchanged between the user and the AI Chatbot -->
+            <ul id="chat-messages" class="list-unstyled messages-list">
+                <!-- Messages exchanged between the user and the AI Chatbot will appear here -->
             </ul>
         </div>
     </div>
-    <form class="message-form">
+    <form id="message-form" class="message-form">
         {% csrf_token %}
         <div class="input-group">
-            <input type="text" class="form-control message-input" placeholder="Type your message...">
+            <input id="user-message" type="text" class="form-control message-input"
+                placeholder="{% translate 'Type your message...' %}">
             <div class="input-group-append">
                 <button type="submit" class="btn btn-primary btn-send">{% translate "Send" %}</button>
             </div>
         </div>
     </form>
+    <button id="scroll-to-top" class="btn btn-secondary">{% translate "Scroll to Top" %}</button>
 </div>
 
 <script>
     const messagesList = document.querySelector('.messages-list');
     const messageForm = document.querySelector('.message-form');
     const messageInput = document.querySelector('.message-input');
+        const scrollToTopButton = document.querySelector('#scroll-to-top');
 
-    messageForm.addEventListener('submit', (event) => {
-        event.preventDefault();
+        function appendMessage(content, sender) {
+            const messageItem = document.createElement('li');
+            messageItem.classList.add('message', sender === 'You' ? 'sent' : 'received');
+            messageItem.innerHTML = `
+            <div class="message-text">
+                <div class="message-sender">
+                    <b>${sender}</b>
+                </div>
+                <div class="message-content">
+                    ${content}
+                </div>
+            </div>`;
+        messagesList.appendChild(messageItem);
+        // Scroll to the bottom of the messages list
+        messagesList.scrollTop = messagesList.scrollHeight;
+    }
 
-        const message = messageInput.value.trim();
-        if (message.length === 0) {
-            return;
-        }
-
-        // Create and add the user message to the messages list
-        const userMessageItem = document.createElement('li');
-        userMessageItem.classList.add('message', 'sent');
-        userMessageItem.innerHTML = `
-        <div class="message-text">
-            <div class="message-sender">
-                <b>You</b>
-            </div>
-            <div class="message-content">
-                ${message}
-            </div>
-        </div>`;
-        messagesList.appendChild(userMessageItem);
-
+        messageForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const message = messageInput.value.trim();
+            if (message.length === 0) {
+                return;
+            }
+            appendMessage(message, 'You');
         // Send an AJAX request to get the AI Chatbot's response
         fetch('{% url "main:chatbot-response" %}', {
             method: 'POST',
@@ -76,27 +80,18 @@
             })
             .then(data => {
                 const response = data.response;
-
-                // Create and add the AI Chatbot's response to the messages list
-                const botMessageItem = document.createElement('li');
-                botMessageItem.classList.add('message', 'received');
-                botMessageItem.innerHTML = `
-                <div class="message-text">
-                    <div class="message-sender">
-                        <b>AI Chatbot</b>
-                    </div>
-                    <div class="message-content">
-                        ${response}
-                    </div>
-                </div>`;
-                messagesList.appendChild(botMessageItem);
-            })
+            appendMessage(response, 'AI Chatbot');
+        })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
             });
-
         // Reset the message input field after sending the message
         messageInput.value = '';
     });
+
+    scrollToTopButton.addEventListener('click', () => {
+        messagesList.scrollTop = 0;
+    });
 </script>
+
 {% endblock %}
