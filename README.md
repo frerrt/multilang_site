@@ -11,24 +11,25 @@ Installation
 
     bash
 
-git clone https://github.com/votreutilisateur/votreprojet.git
-cd votreprojet
+git clone https://github.com/frerrt/multilang_site.git
+cd multilang_site
 
 Créez et activez un environnement virtuel :
 
 bash
 
 python -m venv venv
-source venv/bin/activate  # Sur Windows, utilisez `venv\Scripts\activate`
+source venv/bin/activate  
 
 Installez les dépendances nécessaires :
 
 bash
 
-    pip install django
+    pip install -r requirements.txt
+    pip install -r requirements.txt -U
 
 
-
+pour lancer le serveur: python manage.py runserver
 
 partie chatbot:
 
@@ -149,14 +150,7 @@ Exécution du Projet
     python manage.py migrate
     python manage.py runserver
 
-    Accédez à http://127.0.0.1:8000/chat/chatbot/ pour interagir avec le chatbot.
+    Accédez à http://127.0.0.1:8000/fr/chat/ pour interagir avec le chatbot.
 
 
-
-
-Résumé
-
-Ce projet Django intègre un simple chatbot pour fournir des réponses basiques prédéfinies. Vous pouvez l'étendre en ajoutant plus de fonctionnalités selon vos besoins.
-
-Ce README devrait fournir une vue d'ensemble complète de l'installation, de la configuration et de l'exécution de votre application Django avec le chatbot de base.
 
